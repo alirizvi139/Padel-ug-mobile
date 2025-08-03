@@ -5,16 +5,17 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import LeaderboardScreen from './src/screens/LeaderboardScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      <StatusBar barStyle={'light-content'} backgroundColor="#0a001f" />
+      <LeaderboardScreen />
+      {/* <NewAppScreen templateFileName="App.tsx" /> */}
     </View>
   );
 }
